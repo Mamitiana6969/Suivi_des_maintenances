@@ -16,6 +16,17 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                  <x-nav-link href='/materiel' :active="request()->routeIs('/materiel')">
+   {{ __('Listes des materiels') }}
+                  </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="/utilisateur" :active="request()->routeIs('/utilisateur')">
+                        {{ __('Liste des utilisateurs') }}
+                    </x-nav-link>
+                </div>
+                
             </div>
 
             <!-- Settings Dropdown -->

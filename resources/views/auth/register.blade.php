@@ -2,11 +2,19 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
+        
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        </div>
+        
+        <!-- prenom -->
+        <div>
+            <x-input-label for="prenom" :value="__('Prenom')" />
+            <x-text-input id="prenom" class="block mt-1 w-full" type="text" name="prenom" :value="old('prenom')" required autofocus autocomplete="prenom" />
+            <x-input-error :messages="$errors->get('pernom')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
@@ -14,6 +22,13 @@
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        <!-- telephone -->
+        <div class="mt-4">
+            <x-input-label for="telephone" :value="__('Telephone')" />
+            <x-text-input id="telephone" class="block mt-1 w-full" type="number" name="telephone" :value="old('email')" required autocomplete="telephone" />
+            <x-input-error :messages="$errors->get('telephone')" class="mt-2" />
         </div>
 
         <!-- Password -->
