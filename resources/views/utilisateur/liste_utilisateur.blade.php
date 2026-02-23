@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/js/all.min.js') }}">
     <title>Document</title>
+     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </head>
 <body>
     <x-app-layout>
@@ -25,8 +26,9 @@
                    <a href="ajouter_utilisateur"> <button class="btn btn-primary mb-1"><i class="fas fa-plus"></i> Ajouter un utilisateur</button></a>
                    
                       @if (@session('status'))
-                         <div class="alert alert-success">
+                         <div class="alert alert-success  alert-dismissible fade show">
                             {{session('status')}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                          </div>
 
                           @endif

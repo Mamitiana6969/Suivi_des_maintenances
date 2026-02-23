@@ -37,7 +37,7 @@ class MaterielController extends Controller
         $materiel->configuration = $request->configuration;
         $materiel->description = $request->description;
         $materiel->save();
-        return redirect('/liste_materiel')->with('status', 'Materiel a bien été ajouté avec succes');
+        return redirect('/liste_materiel')->with('status', 'Le nouveau matériel a bien été ajouté avec succès');
     }
     public function modifier_materiel_traitement(Request $request)
     {
@@ -55,6 +55,6 @@ class MaterielController extends Controller
         $materiel->configuration = $request->configuration;
         $materiel->description = $request->description;
         $materiel->update();
-        return redirect('/liste_materiel')->with('status', 'Materiel a bien été modifié avec succes');
+        return redirect('/liste_materiel')->with('status', 'Modification du matériel effectuée avec succès.');
     }
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/js/all.min.js') }}">
     <title>Document</title>
+        <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </head>
 <body>
     <x-app-layout>
@@ -51,7 +52,46 @@
         </tr>
   
     </tbody>
-   <button type="submit" class="btn btn-success"> <i class="fas fa-save"></i> Modifier</button>
+   
+
+   <div class="container">
+ 
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fas fa-save"></i> Modifier</button>
+  
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" 
+     data-bs-keyboard="false" 
+     tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title">
+<h1 class=" text-primary text-center" style="font-size: 25px;">Confirmation !</h1>
+        </div>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Est-ce que vous pouvez modifier ce matériel ?
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Non</button>
+        <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Oui
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
 </table>
 
 </form>

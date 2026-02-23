@@ -35,7 +35,7 @@ class UtilisateurController extends Controller
         $utilisateur->email = $request->email;
         $utilisateur->telephone = $request->telephone;
         $utilisateur->save();
-        return redirect('/liste_utilisateur')->with('status', 'Utilisateur a bien été ajouté avec succes');
+        return redirect('/liste_utilisateur')->with('status', 'Le nouvel utilisateur a bien été ajouté avec succès');
    }
    public function modifier_utilisateur_traitement(Request $request)
 {
@@ -51,6 +51,6 @@ class UtilisateurController extends Controller
         $utilisateur->email = $request->email;
         $utilisateur->telephone = $request->telephone;
         $utilisateur->update();
-        return redirect('/liste_utilisateur')->with('status', 'Utilisateur a bien été modifié avec succes');
+        return redirect('/liste_utilisateur')->with('status', 'Modification de l’utilisateur effectuée avec succès !!!');
 }
 }
